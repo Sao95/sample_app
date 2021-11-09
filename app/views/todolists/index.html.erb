@@ -1,0 +1,10 @@
+<h1>投稿一覧</h1>
+<% @lists.each do |list| %>
+  <p>タイトル</p>
+  <span>
+    <!-- 一覧画面から詳細画面へ遷移するリンクを設定 -->
+    <!-- link_toメソッドは、HTMLの要素を出力するメソッド -->
+    <!-- %= link_to 表示させるテキスト , リンク先URL [,オプション] % -->
+    <%= link_to list.title, todolist_path(list.id) %> 
+  </span>
+<% end %>
